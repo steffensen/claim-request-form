@@ -2,6 +2,7 @@ export default {
   data() {
     return {
       dialogVisible: false,
+      // Adding properties for input fields.
       claimForm: {
         name: '',
         lastName: '',
@@ -10,6 +11,7 @@ export default {
         textArea: '',
         terms: ''
       },
+      // Adding Rules for each input
       rules: {
         name: [{
           required: true,
