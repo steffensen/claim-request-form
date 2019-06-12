@@ -58,6 +58,11 @@ export default {
           return false;
         }
       });
+    },
+    reset(claimForm) {
+      // reset claimForm data when clicking confirm.
+      this.claimForm.dialogVisible = false
+      this.$refs[claimForm].resetFields()
     }
   }
 }

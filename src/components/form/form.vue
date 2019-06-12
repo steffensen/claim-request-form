@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <!-- Adding form el-form from elementUI -->
-    <el-form :model="claimForm" :rules="rules" ref="claimForm">
+    <el-form :model="claimForm" :rules="rules" ref="claimForm" @click="dialogVisible">
       <!-- Adding last name -->
       <el-form-item label="First Name" prop="name">
         <el-input placeholder="Enter First Name" v-model="claimForm.name"></el-input>
@@ -49,7 +49,7 @@
         {{claimForm.textArea}}
         <span slot="footer" class="dialog-footer">
           <el-button @click="dialogVisible = false">Cancel</el-button>
-          <el-button type="primary" @click="dialogVisible = false">Confirm</el-button>
+          <el-button type="primary" @click="reset('claimForm'), dialogVisible = false">Confirm</el-button>
         </span>
       </el-dialog>
     </el-form>
